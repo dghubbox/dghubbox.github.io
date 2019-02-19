@@ -23,7 +23,7 @@ function vanillaAJAX(postcode){
       var addressLine2 = firstResult.address.street2;
       var addressPostcode = firstResult.address.postcode;
       // console.log(firstResult);
-      parent.postMessage(`${addressName},<br>${addressLine1},<br>${addressLine2},<br>${addressPostcode}`,"*")
+      parent.postMessage(`<strong>postMessage from iframe modal</strong><br><br>${addressName},<br>${addressLine1},<br>${addressLine2},<br>${addressPostcode}`,"*")
     } else {
       console.log('Error: ' + xhr.status); // An error occurred during the request.
     }
