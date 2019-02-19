@@ -8,6 +8,7 @@
 * Hosted here - https://dghubbox.neocities.org/
 * Links to iframe on github pages
 * Post with neocities API https://neocities.org/api
+* `curl -F "index.html=@parent/index.html" "https://dghubbox:PASS@neocities.org/api/upload"`
 
 ```js
 // Create IE + others compatible event handler
