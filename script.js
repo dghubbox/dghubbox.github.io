@@ -24,7 +24,7 @@ function vanillaAJAX(postcode){
       var addressLine2 = firstResult.address.street2;
       var addressLine3 = firstResult.address.street3;
       // console.log(firstResult);
-      parent.postMessage(`${addressLine1}, ${addressLine2}, ${addressLine3}`,"*")
+      parent.postMessage(`${addressLine1},<br> ${addressLine2},<br> ${addressLine3}`,"*")
     } else {
       // console.log('Error: ' + xhr.status); // An error occurred during the request.
     }
