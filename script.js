@@ -3,8 +3,6 @@ submitBtn = document.getElementById('submit');
 submitBtn.addEventListener('click', function(){
   postcodeField = document.getElementById('postcode').value;
   vanillaAJAX(postcodeField);
-
-  // parent.postMessage(`${nameField} ${emailField}`,"*");
 })
 
 function vanillaAJAX(postcode){
@@ -20,13 +18,14 @@ function vanillaAJAX(postcode){
       // console.log(xhr.responseText); // 'This is the returned text.'
       var data = JSON.parse(xhr.responseText);
       var firstResult = data._embedded.collectpoints[0]
+      var addressName = firstResult.name;
       var addressLine1 = firstResult.address.street1;
       var addressLine2 = firstResult.address.street2;
-      var addressLine3 = firstResult.address.street3;
+      var addressPostcode = firstResult.address.postcode;
       // console.log(firstResult);
-      parent.postMessage(`${addressLine1},<br> ${addressLine2},<br> ${addressLine3}`,"*")
+      parent.postMessage(`${addressName},<br>${addressLine1},<br>${addressLine2},<br>${addressPostcode}`,"*")
     } else {
-      // console.log('Error: ' + xhr.status); // An error occurred during the request.
+      console.log('Error: ' + xhr.status); // An error occurred during the request.
     }
   }
 };
