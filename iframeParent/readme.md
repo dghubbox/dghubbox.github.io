@@ -7,6 +7,7 @@
 ## Parent
 * Hosted here - https://dghubbox.neocities.org/
 * Links to iframe on github pages
+* Post with neocities API https://neocities.org/api
 
 ```js
 // Create IE + others compatible event handler
