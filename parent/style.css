@@ -1,3 +1,8 @@
+body {
+  text-align: center;
+  background: red;
+}
+
 #modal {
   display: none;
   width: 100%;
